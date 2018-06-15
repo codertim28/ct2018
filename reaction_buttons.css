@@ -1,0 +1,34 @@
+/* the reaction buttons region */
+div.reaction_buttons {
+    margin: 50px 0;
+}
+
+div.reaction_buttons ul {
+	margin: 0;
+}
+
+/* a single normal button */
+div.reaction_buttons li.reaction_button {
+    border: 1px solid #888;
+	margin: 4px 4px 4px 0;
+	padding: 4px 8px;
+    cursor: pointer;
+    list-style: none;
+    text-align: center;
+    display: inline-block;
+}
+
+div.reaction_buttons div.reaction_buttons_tagline {
+	font-size: 20px;
+}
+
+/* the button while hovering over it */
+div.reaction_buttons li.reaction_button:hover {
+	background: #888;
+}
+
+/* the button after voting */ 
+div.reaction_buttons li.voted,
+div.reaction_buttons li.voted:hover {
+    cursor: default;
+}
