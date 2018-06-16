@@ -22,7 +22,7 @@
 		<!-- Für Google-Ads -->
 
 		<!-- Um AdBlocker zu erkennen -->
-		<script src="<?php bloginfo('template_directory'); ?>/js/banner-ad.js"></script>
+		<script src="<?php assetsPath('javascript'); ?>/banner-ad.js"></script>
 
 		<?php wp_head(); ?>
 	</head>
@@ -39,14 +39,14 @@
 			</div>
 		</nav><!-- nav -->
 		<div class="top-banner">
-			<img id="blog-logo" src="header1.png" />
+			<img id="blog-logo" src="<?php assetsPath('image'); ?>/header1.png" />
 			<div class="search-container">
 				<form role="search" method="get" id="searchform-1" class="searchform" action="<?php bloginfo('url'); ?>">
 					<input type="text" value="" placeholder="Suchbegriff..." name="s" id="s" />
-					<button type="submit"><img src="<?php bloginfo('template_directory');?>/img/loupe1.png" alt="Suche" height="20" width="20" /></button>
+					<button type="submit"><img src="<?php assetsPath('image'); ?>/loupe1.png" alt="Suche" height="20" width="20" /></button>
 				</form>
 			</div>
-			<img id="menu-btn" src="<?php bloginfo('template_directory'); ?>/img/menu0.png" />
+			<img id="menu-btn" src="<?php assetsPath('image'); ?>/menu0.png" />
 		</div>
 		<header role="banner">
 			<h1 id="blog-title"><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1>
