@@ -28,6 +28,7 @@
 	</head>
 
 	<body <?php body_class(); ?>>
+		<!-- main-nav -->
 		<nav id="main_nav" role="navigation">
 			<div class="wrapper">
 				<?php wp_nav_menu(array(
@@ -49,7 +50,11 @@
 			<img id="menu-btn" src="<?php assetsPath('image'); ?>/menu0.png" />
 		</div>
 		<header role="banner">
-			<h1 id="blog-title"><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1>
+			<?php if(is_single()): ?>
+				<span id="blog-title"><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></span>
+			<?php else: ?>
+				<h1 id="blog-title"><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1>
+			<?php endif; ?>
 		</header><!-- header -->
 		<main role="main">
 			<div class="wrapper">
