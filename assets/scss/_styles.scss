@@ -7,10 +7,9 @@
 
 // TODO:
 // - Layoutbreite auslagern (var o.a.)
-// - irgendwas einfallen lassen wegen a (mixin?)
 
 
-nav {
+nav#main_nav {
     display: none;
 }
 
@@ -118,16 +117,44 @@ section.blogpost-list {
 			float: right;
 			color: $gray-2;
 
-      a {
-        color: $gray-2;
-        text-decoration: none;
+         a {
+           color: $gray-2;
+           text-decoration: none;
 
-        &:hover {
-          color: $gray-3;
-        }
-      }
+           &:hover {
+             color: $gray-3;
+           }
+         }
 		}
 	}
+}
+
+nav.pagination {
+   ul.page-numbers {
+      margin: 40px 0 0 0;
+      padding: 0;
+      text-align: center;
+      font-size: 18px;
+
+      li {
+         display: inline-block;
+         list-style-type: none;
+         margin: 4px;
+
+         a {
+            text-decoration: none;
+            color: $gray-4;
+
+            &:hover {
+               color: black;
+            }
+         }
+      }
+
+      li > span.current, li > span.dots {
+         color: $gray-3;
+      }
+   }
 }
 
 /******************

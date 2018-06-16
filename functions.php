@@ -6,15 +6,13 @@
 
 // FUNKTIONEN
 // Gibt den Paginator aus
-function show_my_page_nav() {
-	echo '<div id="page_nav">';
-			the_posts_pagination( array(
-				'type'               => 'list',
-				'prev_text'          => '&laquo; Zur&uuml;ck',
-				'next_text'          => 'Weiter &raquo;',
-				'screen_reader_text' => ' '
-			) );
-	echo '</div>';
+function show_pagination() {
+		the_posts_pagination(array(
+			'type'               => 'list',
+			'prev_text'          => '&laquo; Zur&uuml;ck',
+			'next_text'          => 'Weiter &raquo;',
+			'screen_reader_text' => ' '
+		));
 }
 
 // Hilft dabei, die Verzeichnisse aller assets
