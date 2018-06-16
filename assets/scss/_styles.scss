@@ -21,8 +21,8 @@ header {
   position: relative;
 	height: 200px;
 
-  h1#blog-title {
-	   position: absolute;
+  #blog-title {
+     position: absolute;
      top: 50%;
      transform: translateY(-50%);
      display: block;
@@ -92,18 +92,15 @@ section.blogpost-list {
 			font-size: 30px;
 		}
 
-		div.thumbnail-container {
+		img.thumbnail {
 			background-color: $gray-2;
-			/* Border wird nicht richtig angezeigt beim Bild (links) */
 			border: 1px solid $gray-2;
-			//border-radius: 2px;
+			border-radius: 2px;
 			margin-bottom: 10px;
 			//box-sizing: border-box;
 
-			img {
-				height: auto;
-				width: 100%;
-			}
+			height: auto;
+			width: 100%;
 		}
 
 		p {
