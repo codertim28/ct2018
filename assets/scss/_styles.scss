@@ -11,6 +11,78 @@
 
 nav#main_nav {
     display: none;
+
+    ul {
+      margin: 10px 0;
+      // Rechts und links über padding,
+      // damit beim Scrollen kein Rand zusehen ist
+      padding: 0 10px;
+      display: flex;
+      overflow-x: scroll;
+
+      // Es soll zwar gescrollt werden in x-Richtung, aber die
+      // browser-eigenen Scrollbars sollen nicht angezeigt werden.
+      -ms-overflow-style: none;  // IE 10+
+      overflow: -moz-scrollbars-none;  // Firefox
+
+      &::-webkit-scrollbar {
+         display: none;  // Safari, Chrome und Opera
+      }
+
+      // Die einzelnen Menuitems
+      li.menu-item {
+         flex-shrink: 0;
+
+         display: inline-block;
+         border: 1px solid $gray-2;
+      	border-radius: 4px;
+      	background-color: white;
+         margin: 5px;
+         padding: 5px 6px;
+         width: 180px;
+         height: 120px;
+
+         a {
+            display: block;
+            height: 100%;
+            // padding ist auf a und li aufgeteilt,
+            // damit es beim hovern einen schönen
+            // Effekt gibt
+            padding: 5px 6px;
+            box-sizing: border-box;
+
+            text-decoration: none;
+            color: $gray-4;
+
+            &:hover {
+               border-radius: 2px;
+               background-color: $gray-2;
+            }
+         }
+
+         // So wird auch nach dem letzten
+         // Element in der Liste ein Abstand angezeigt.
+         // Außerdem versteckt sich dort ein kleiner
+         // Smiley ...
+         &:last-of-type {
+            &::after {
+               content: '☺';
+               position: relative;
+               top: -8px;
+               left: 200px;
+               margin-right: 5px;
+               color: $gray-3;
+            }
+         }
+      }
+
+      li.current-menu-item {
+         background-image: repeating-linear-gradient(45deg,
+                                white 0%,
+                                white 4%, $gray-1 4%,
+                                $gray-1 8%, white 8%);
+      }
+   }
 }
 
 /******************
