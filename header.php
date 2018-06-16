@@ -41,7 +41,7 @@
 		</nav><!-- nav -->
 		<div class="top-banner">
 			<img id="blog-logo" src="<?php assetsPath('image'); ?>/header1.png" />
-			<div class="search-container">
+			<div class="search-container ct-search-container">
 				<form role="search" method="get" id="searchform-1" class="searchform" action="<?php bloginfo('url'); ?>">
 					<input type="text" value="" placeholder="Suchbegriff..." name="s" id="s" />
 					<button type="submit"><img src="<?php assetsPath('image'); ?>/loupe1.png" alt="Suche" height="20" width="20" /></button>
