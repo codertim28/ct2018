@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="de">
 	<head>
 		<meta charset="utf-8" />
@@ -14,13 +13,13 @@
 		</title>
 
  		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
-		<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
+		<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" />
 		<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/reaction_buttons.css">
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
-		<!-- jQuery und andere Skripts einbinden /-->
-		<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/lib/jquery-3.3.1.min.js"></script>
-		<!-- F�r Google-Ads -->
+		<!-- jQuery und andere Scripts einbinden /-->
+		<script type="text/javascript" src="<?php assetsPath('javascript'); ?>/lib/jquery-3.3.1.min.js"></script>
+		<!-- Für Google-Ads -->
 
 		<!-- Um AdBlocker zu erkennen -->
 		<script src="<?php bloginfo('template_directory'); ?>/js/banner-ad.js"></script>
@@ -47,7 +46,7 @@
 					<button type="submit"><img src="<?php bloginfo('template_directory');?>/img/loupe1.png" alt="Suche" height="20" width="20" /></button>
 				</form>
 			</div>
-			<img id="menu-btn" src="<?php bloginfo('template_directory');?>/img/menu0.png" />
+			<img id="menu-btn" src="<?php bloginfo('template_directory'); ?>/img/menu0.png" />
 		</div>
 		<header role="banner">
 			<h1 id="blog-title"><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1>
