@@ -36,33 +36,15 @@
 		</section>
 	</footer><!-- footer -->
 	<script>
-		// Für die Navigation
-		var menuOpen = false;
-		var optIn = {duration: 800, easing: 'easeOutBack'};
-		var optOut = {duration: 800, easing: 'easeInBack'};
-
-		var templateDir = <?php echo "'" . get_template_directory_uri() . "'"; ?>;
-
-		$('#menu-button').on('click', function(e){
-			e.stopPropagation(); // -> Damit das parent-element nicht getriggert wird
-			toggeleMenu();
-		});
-
-		$('header, main, footer').on('click', function(){
-			if(menuOpen) {
-				toggeleMenu();
-			}
-		});
-
-		function toggeleMenu() {
-			if(!menuOpen) {
-				menuOpen = true;
-			}
-			else {
-				menuOpen = false;
-			}
-		}
-
+		// Einige Konstanten werden auch von Javascript benötigt.
+		// Diese werden hier aufgelistet.
+		const assetsPath = {
+				javascript: '<?php assetsPath('javascript'); ?>',
+				image: '<?php assetsPath('image'); ?>',
+		};
+	</script>
+	<script src="<?php assetsPath('javascript'); ?>/navigation.js"></script>
+	<script>
 		// AdBlocker-Blocker
 		try {
 			if(!noblocker) {
