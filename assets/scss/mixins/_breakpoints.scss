@@ -8,7 +8,7 @@
 // Der Breakpoint und größer
 @mixin screensize-up($breakpoint) {
    @if map-has-key($breakpoints, $breakpoint) {
-      @media (min-width: #{map-get($breakpoints, $breakpoint)}) {
+      @media (min-width: #{map-get($breakpoints, $breakpoint)-1}) {
          @content;
       }
    }
@@ -17,7 +17,7 @@
 // Der Breakpoint und kleiner
 @mixin screensize-down($breakpoint) {
    @if map-has-key($breakpoints, $breakpoint) {
-      @media (max-width: #{map-get($breakpoints, $breakpoint)}) {
+      @media (max-width: #{map-get($breakpoints, $breakpoint)+1}) {
          @content;
       }
    }
