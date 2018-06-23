@@ -1,0 +1,24 @@
+
+/*
+ * Diese Mixins bieten die Möglichkeit, das Verhalten von
+ * Elementen bereits während ihrer ersten Gestaltung fest-
+ * zu legen.
+ */
+
+// Der Breakpoint und größer
+@mixin screensize-up($breakpoint) {
+   @if map-has-key($breakpoints, $breakpoint) {
+      @media (min-width: #{map-get($breakpoints, $breakpoint)}) {
+         @content;
+      }
+   }
+}
+
+// Der Breakpoint und kleiner
+@mixin screensize-down($breakpoint) {
+   @if map-has-key($breakpoints, $breakpoint) {
+      @media (max-width: #{map-get($breakpoints, $breakpoint)}) {
+         @content;
+      }
+   }
+}

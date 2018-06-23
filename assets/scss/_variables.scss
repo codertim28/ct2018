@@ -14,3 +14,12 @@ $text-font:         'Lato', sans-serif;
 
 $base-font-size:    16px;
 $base-font-color:   $gray-4;
+
+// BREAKPOINTS
+$breakpoints: (
+   xs: 320px,
+   s:  375px,
+   m:  768px,
+   l:  1024px,
+   xl: 1440px
+);
