@@ -10,6 +10,7 @@ Author URI:
 // (Ziel: ../../style.css)
 
 @import 'variables';
+@import 'mixins/breakpoints';
 @import 'reset';
 @import 'styles';
 
