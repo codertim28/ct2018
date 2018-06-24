@@ -19,6 +19,7 @@
 
 		<!-- jQuery und andere Scripts einbinden /-->
 		<script type="text/javascript" src="<?php assetsPath('javascript'); ?>/lib/jquery-3.3.1.min.js"></script>
+
 		<!-- Für Google-Ads -->
 
 		<!-- Um AdBlocker zu erkennen -->
@@ -30,14 +31,14 @@
 	<body <?php body_class(); ?>>
 		<!-- main-nav -->
 		<nav id="main_nav" role="navigation">
-			<div class="wrapper">
-				<?php wp_nav_menu(array(
-					'container' => false,
-					'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-					'theme_location' => 'primary'
-					)
-				); ?>
-			</div>
+			<?php wp_nav_menu(array(
+				'container' => false,
+				'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+				'theme_location' => 'primary'
+				)
+			); ?>
+			<img src="<?php assetsPath('image'); ?>/arrow-left.svg" class="nav-arrow-left animated bounce-left" />
+			<img src="<?php assetsPath('image'); ?>/arrow-right.svg" class="nav-arrow-right animated bounce-right" />
 		</nav><!-- nav -->
 		<div class="top-banner">
 			<img id="blog-logo" src="<?php assetsPath('image'); ?>/header1.png" />

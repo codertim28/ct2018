@@ -10,7 +10,8 @@
 
 
 nav#main_nav {
-    display: none;
+   display: none;
+   padding-bottom: 32px; // Hält Platz für den Pfeil
 
     ul {
       margin: 10px 0;
@@ -84,6 +85,30 @@ nav#main_nav {
                                 white 4%, $gray-1 4%,
                                 $gray-1 8%, white 8%);
       }
+   }
+
+   // TODO: Pfeile verstecken für mobile Geräte
+   // und dabei das Padding der nav#main_nav rausnehmen
+   %nav-arrows-shared {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+      opacity: 0.6;
+   }
+
+   .nav-arrow-right {
+      @extend %nav-arrows-shared;
+      right: 10px;
+   }
+
+   .nav-arrow-left {
+      @extend %nav-arrows-shared;
+      left: 10px;
+      // Soll zunächst nicht angezeigt werden.
+      // Wird von Javascript eingeblendet, wenn
+      // nach links gescrollt werden kann.
+      display: none;
    }
 }
 

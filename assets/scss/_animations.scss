@@ -1,0 +1,76 @@
+// Die Klasse für alle animierten Elemente
+.animated {
+  -webkit-animation-duration: .8s;
+  animation-duration: .8s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+/*
+ * Anmerkung:
+ * Jede Animation ist wie folgt aufgebaut:
+ * 1) Deklaration der Animation per @keyframes
+ * 2) Die Klasse, welche ein Element bekommt, um
+ *    entsprechend animiert zu werden.
+ */
+
+// Bounce-Animationen
+@keyframes bounce-right {
+   0%, 20%, 40%, 100% {
+      transform: translateX(0);
+   }
+   80% {
+      transform: translateX(-2px);
+   }
+   90% {
+      transform: translateX(5px);
+   }
+}
+// TODO: [DRY] Code aufräumen und schöner machen
+.bounce-right {
+  -webkit-animation-name: bounce-right;
+  animation-name: bounce-right;
+
+  // Standardwerte überschreiben:
+  // - Die Animation soll nur 5 mal abgespielt werden.
+  // - Sie soll verspätet starten.
+  // - und länger dauern.
+  -webkit-animation-iteration-count: 8;
+  animation-iteration-count: 8;
+  -webkit-animation-duration: 1.8s;
+  animation-duration: 1.8s;
+  -webkit-animation-delay: 1.5s;
+  animation-delay: 1.5s;
+}
+
+@keyframes bounce-left {
+   0%, 20%, 40%, 100% {
+      transform: translateX(0);
+   }
+   80% {
+      transform: translateX(2px);
+   }
+   90% {
+      transform: translateX(-5px);
+   }
+}
+
+.bounce-left {
+  -webkit-animation-name: bounce-left;
+  animation-name: bounce-left;
+
+  // Standardwerte überschreiben:
+  // - Die Animation soll nur 5 mal abgespielt werden.
+  // - Sie soll verspätet starten.
+  // - und länger dauern.
+  -webkit-animation-iteration-count: 8;
+  animation-iteration-count: 8;
+  -webkit-animation-duration: 1.8s;
+  animation-duration: 1.8s;
+  -webkit-animation-delay: 1.5s;
+  animation-delay: 1.5s;
+}
