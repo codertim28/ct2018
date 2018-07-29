@@ -32,7 +32,7 @@
 				'theme_location' => 'secondary'
 				)
 			); ?>
-			<span> &copy; Created by Tim Poerschke | Proudly powered by <a href="http://www.wordpress.org"> Wordpress</a> </span>
+			<span class="themeinfo"> &copy; Created by Tim Poerschke | Proudly powered by <a href="http://www.wordpress.org"> Wordpress</a> </span>
 		</section>
 	</footer><!-- footer -->
 	<script>

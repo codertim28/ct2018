@@ -304,6 +304,15 @@ nav.pagination {
 /******************
  *     Footer     *
  ******************/
+%footer-a {
+   color: $gray-4;
+   text-decoration: none;
+
+   &:hover {
+      text-decoration: underline;
+   }
+}
+
 footer {
 	max-width: $base-layout-width;
    width: 80%; // -> wrapper?
@@ -312,28 +321,72 @@ footer {
 	section.main-footer {
 		display: flex;
       flex-wrap: wrap;
-		padding: 0 30px;
+		padding: 0 10px;
 		color: $gray-3;
+
+      @include screensize-up(m) {
+         padding: 0 30px;
+      }
 
 		.left-footer, .right-footer {
          flex-shrink: 0;
          flex-grow: 1;
          width: 50%;
          min-width: 200px;
+
+         > ul {
+            padding: 0;
+            margin: 0 10px;
+
+            li.widget-container {
+               padding: 20px 0;
+               list-style-type: none;
+
+               div.widget-title {
+                  margin-bottom: 10px;
+               }
+
+               a {
+                  @extend %footer-a;
+               }
+            }
+         }
 		}
 
 		.left-footer {
-			border-right: 1px solid $gray-2;
+         @include screensize-up(m) {
+            border-right: 1px solid $gray-2;
+         }
 		}
 	}
 
 	section.footer-bottom {
+      border-top: 1px solid $gray-2;
 		margin-top: 20px;
+      padding-top: 20px;
 		text-align: center;
 
-		p {
+		p, span, li {
 			font-size: 12px;
 			color: $gray-3;
 		}
+
+      a {
+         @extend %footer-a;
+      }
+
+      span.themeinfo {
+         padding: 10px;
+      }
+
+      div.menu > ul {
+         margin: 0;
+         padding: 0;
+
+         li {
+            display: inline-block;
+            margin: 0 2px;
+         }
+      }
 	}
 }
