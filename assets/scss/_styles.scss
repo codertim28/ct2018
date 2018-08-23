@@ -205,15 +205,11 @@ div.top-banner {
  *      Main      *
  ******************/
 main {
-	width: 100%;
-}
-
-section.blogpost-list {
-	border: 1px solid $gray-2;
+   border: 1px solid $gray-2;
 	border-radius: 4px;
 	background-color: white;
-	max-width: $base-layout-width;
 	width: 80%;
+   max-width: $base-layout-width;
 	margin: 0 auto 40px auto;
 	padding: 40px 90px;
 
@@ -222,53 +218,60 @@ section.blogpost-list {
       padding: 10px 15px;
       border-radius: 0;
    }
+}
+
+%blogpost-base {
+   padding: 30px 0;
+
+   h2 {
+      margin-bottom: 10px;
+      font-size: 30px;
+   }
+
+   img.thumbnail {
+      background-color: $gray-2;
+      border: 1px solid $gray-2;
+      border-radius: 2px;
+      margin-bottom: 10px;
+
+      height: auto;
+      width: 100%;
+   }
+
+   p {
+      margin-bottom: 10px;
+   }
+
+   div.blogpost-meta {
+      float: right;
+      color: $gray-2;
+
+      @include screensize-down(s) {
+         font-size: 14px;
+      }
+
+      a {
+        color: $gray-2;
+        text-decoration: none;
+
+        &:hover {
+          color: $gray-3;
+        }
+      }
+   }
+}
+
+section.blogpost-list {
 
 	article.blogpost {
-		padding: 30px 0;
-		border-bottom: 1px solid $gray-2;
-
-		h2 {
-			margin-bottom: 10px;
-			font-size: 30px;
-		}
-
-		img.thumbnail {
-			background-color: $gray-2;
-			border: 1px solid $gray-2;
-			border-radius: 2px;
-			margin-bottom: 10px;
-
-			height: auto;
-			width: 100%;
-		}
-
-		p {
-			margin-bottom: 10px;
-		}
+		@extend %blogpost-base;
+      border-bottom: 1px solid $gray-2;
 
 		a.more-link {
          display: inline-block;
 			margin-top: 8px;
 			color: $gray-3;
 			text-decoration: none;
-		}
-
-		div.blogpost-meta {
-			float: right;
-			color: $gray-2;
-
-         @include screensize-down(s) {
-            font-size: 14px;
-         }
-
-         a {
-           color: $gray-2;
-           text-decoration: none;
-
-           &:hover {
-             color: $gray-3;
-           }
-         }
 		}
 	}
 }
@@ -297,6 +300,48 @@ nav.pagination {
 
       li > span.current, li > span.dots {
          color: $gray-3;
+      }
+   }
+}
+
+/******************
+ *     Single     *
+ ******************/
+article.blogpost {
+   @extend %blogpost-base;
+   position: relative;
+
+   span.post-date {
+      position: absolute;
+      top: -5px;
+      font-size: 18px;
+      color: $gray-2;
+      opacity: 0.5;
+      transition: 0.4s;
+
+      @include screensize-down(s) {
+         top: 6px;
+      }
+
+      &:hover {
+         opacity: 1;
+      }
+   }
+}
+
+// Kommentare
+div.comment-respond {
+   clear: both;
+
+   form {
+
+      p {
+         line-height: normal;
+      }
+
+      label {
+         display: block;
+         margin-top: 10px;
       }
    }
 }
