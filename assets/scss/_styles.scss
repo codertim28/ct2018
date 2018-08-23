@@ -336,12 +336,35 @@ div.comment-respond {
    form {
 
       p {
-         line-height: normal;
+         line-height: 20px;
       }
 
       label {
          display: block;
          margin-top: 10px;
+      }
+
+      %base-input {
+         border: 1px solid $gray-2;
+         border-radius: 3px;
+         padding: 4px 8px;
+         width: 400px;
+         max-width: 100%;
+      }
+
+      input[type=text] {
+         @extend %base-input;
+      }
+
+       textarea {
+          @extend %base-input;
+       }
+
+      input[type=submit] {
+         @extend %base-input;
+         background-color: $gray-2;
+         margin-top: 16px;
+         cursor: pointer;
       }
    }
 }
