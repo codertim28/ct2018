@@ -58,8 +58,9 @@
 		}
 
 		function showBlockerInfo() {
-			$('#anti-blocker').addClass('info-error');
-			$('#anti-blocker').html('<p><b>Du hast einen AdBlocker aktiviert? </b><br/> Bitte deaktiviere deinen AdBlocker. Ich verwende auf dieser Seite keine nervige Werbung. Von den Einnahmen kaufe ich mir lediglich einen Kaffee oder eine Kinokarte :-)</p>');
+			$('#anti-blocker').addClass('info');
+			$('#anti-blocker').addClass('error');
+			$('#anti-blocker').html('<p class="content"><b>Du hast einen AdBlocker aktiviert? </b><br/> Bitte deaktiviere deinen AdBlocker. Ich verwende auf dieser Seite keine nervige Werbung. Von den Einnahmen kaufe ich mir lediglich einen Kaffee oder eine Kinokarte :-)</p>');
 		}
 	</script>
 	<?php wp_footer(); ?>

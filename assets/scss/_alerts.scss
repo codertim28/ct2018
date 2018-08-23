@@ -1,0 +1,20 @@
+// In dieser Datei sind alle Nutzerbenarichtigungen
+// definiert.
+// Gibt man einer div die .info-Klasse, so wird ein eine Standard-
+// information gezeigt. Durch das Hinzufügen einer anderen Klasse
+// (z.B. error) wird das Ganze verfeinert (background wird angepasst usw.).
+
+.info {
+   border-radius: 2px;
+   background-color: $default-alert;
+   padding: 4px 8px;
+   margin-bottom: 10px;
+
+   > p.content {
+      margin: 0;
+   }
+}
+
+.error {
+   background-color: $error;
+}
