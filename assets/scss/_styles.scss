@@ -373,6 +373,20 @@ div.comment-respond {
 }
 
 /******************
+ *      404       *
+ ******************/
+div.page-not-found {
+   min-height: 800px;
+
+   p.err-404 {
+      margin-top: 40px;
+      font-family: $headings-font;
+      font-size: 100px;
+      text-align: center;
+   }
+}
+
+/******************
  *     Footer     *
  ******************/
 %footer-a {

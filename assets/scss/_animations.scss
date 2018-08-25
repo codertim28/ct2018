@@ -1,13 +1,26 @@
 // Die Klasse für alle animierten Elemente
+%base-animated {
+   -webkit-animation-fill-mode: both;
+   animation-fill-mode: both;
+   -webkit-animation-timing-function: linear;
+   animation-timing-function: linear;
+   -webkit-animation-iteration-count: infinite;
+   animation-iteration-count: infinite;
+}
+
+@mixin animation-duration($seconds) {
+   -webkit-animation-duration: $seconds;
+   animation-duration: $seconds;
+}
+
 .animated {
-  -webkit-animation-duration: .8s;
-  animation-duration: .8s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-  -webkit-animation-timing-function: linear;
-  animation-timing-function: linear;
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
+   @extend %base-animated;
+   @include animation-duration(0.8s);
+}
+
+.animated-slow {
+   @extend %base-animated;
+   @include animation-duration(80s);
 }
 
 /*
@@ -73,4 +86,19 @@
   animation-duration: 1.8s;
   -webkit-animation-delay: 1.5s;
   animation-delay: 1.5s;
+}
+
+// 404
+@keyframes change-font-color-red {
+   0%, 100% {
+      color: $base-font-color;
+   }
+   50% {
+      color: $ct-secondary;
+   }
+}
+
+.change-font-color-red {
+  -webkit-animation-name: change-font-color-red;
+  animation-name: change-font-color-red;
 }
