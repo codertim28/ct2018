@@ -403,6 +403,36 @@ section.list-information {
 }
 
 /******************
+ *    Search      *
+ ******************/
+
+p.search-excerpt {
+   // Verlauf der Textfarbe
+   background: -webkit-linear-gradient($base-font-color, white);
+   background: linear-gradient($base-font-color, white);
+   -webkit-background-clip: text;
+   background-clip: text;
+   -webkit-text-fill-color: transparent;
+   text-fill-color: transparent;
+
+   span.suchwort {
+      background-color: $ct-secondary;
+      -webkit-background-clip: text;
+      background-clip: text;
+   }
+}
+
+div.no-search-result {
+   min-height: 400px;
+
+   span {
+      display: block;
+      margin: 20px 0;
+      font-size: 80px;
+   }
+}
+
+/******************
  *     Footer     *
  ******************/
 %footer-a {
