@@ -387,6 +387,22 @@ div.page-not-found {
 }
 
 /******************
+ *     Lists      *
+ ******************/
+/* Author, Archive, Category & Tag */
+
+section.list-information {
+   border-bottom: 1px solid $gray-2;
+   padding-bottom: 12px;
+
+   span {
+      font-family: $headings-font;
+      font-size: 24px;
+      color: $gray-2;
+   }
+}
+
+/******************
  *     Footer     *
  ******************/
 %footer-a {
