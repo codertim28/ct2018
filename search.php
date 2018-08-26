@@ -24,7 +24,7 @@
 		<?php show_pagination(); ?>
 		<?php if(have_posts() <= 0) : ?>
 			<div class="no-search-result">
-				<span class="animated-slow change-font-color-red"> :( </span>
+				<span class="animated-slow change-font-color-green"> :( </span>
 				<h2> Nichts gefunden... </h2>
 				<p> Leider gibt es nichts, was zu deiner Suchanfrage passt. </p>
 			</div>

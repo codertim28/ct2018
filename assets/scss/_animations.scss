@@ -89,7 +89,7 @@
 }
 
 // 404
-@keyframes change-font-color-red {
+@keyframes change-font-color-green {
    0%, 100% {
       color: $base-font-color;
    }
@@ -98,7 +98,7 @@
    }
 }
 
-.change-font-color-red {
-  -webkit-animation-name: change-font-color-red;
-  animation-name: change-font-color-red;
+.change-font-color-green {
+  -webkit-animation-name: change-font-color-green;
+  animation-name: change-font-color-green;
 }
