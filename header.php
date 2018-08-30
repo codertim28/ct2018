@@ -51,7 +51,7 @@
 			<img id="menu-btn" src="<?php assetsPath('image'); ?>/menu0.png" />
 		</div>
 		<header role="banner">
-			<?php if(is_single()): ?>
+			<?php if(is_singular()): ?>
 				<span id="blog-title"><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></span>
 			<?php else: ?>
 				<h1 id="blog-title"><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1>
