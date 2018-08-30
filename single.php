@@ -5,7 +5,7 @@
          <?php $postDate = get_the_date('d. F Y'); ?>
          <span class="post-date"> <?php echo $postDate ?> </span>
          <!-- TODO: h2 -> h1 ? -->
-         <h2><?php the_title(); ?></h2>
+         <h2 class="title"><?php the_title(); ?></h2>
 			<?php if(has_post_thumbnail()) : ?>
 				<img class='thumbnail' src="<?php the_post_thumbnail_url('full'); ?>" alt="[Thumbnail] <?php the_title(); ?>"/>
 			<?php endif; ?>

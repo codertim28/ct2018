@@ -223,13 +223,19 @@ main {
    }
 }
 
-%blogpost-base {
+%singular-base {
    padding: 30px 0;
 
-   h2 {
-      margin-bottom: 10px;
+   .title {
       font-size: 30px;
    }
+
+   p {
+      text-align: justify;
+   }
+}
+
+%blogpost-base {
 
    img.thumbnail {
       background-color: $gray-2;
@@ -239,10 +245,6 @@ main {
 
       height: auto;
       width: 100%;
-   }
-
-   p {
-      margin-bottom: 10px;
    }
 
    div.blogpost-meta {
@@ -267,6 +269,7 @@ main {
 section.blogpost-list {
 
 	article.blogpost {
+      @extend %singular-base;
 		@extend %blogpost-base;
       border-bottom: 1px solid $gray-2;
 
@@ -311,6 +314,7 @@ nav.pagination {
  *     Single     *
  ******************/
 article.blogpost {
+   @extend %singular-base;
    @extend %blogpost-base;
    position: relative;
 
@@ -377,12 +381,7 @@ div.comment-respond {
  ******************/
 
 article.page {
-   padding: 30px 0;
-
-   h1.page-title {
-      margin-bottom: 10px;
-      font-size: 30px;
-   }
+   @extend %singular-base;
 }
 
 /******************
