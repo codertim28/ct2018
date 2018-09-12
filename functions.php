@@ -17,7 +17,7 @@ function show_pagination() {
 
 // Hilft dabei, die Verzeichnisse aller assets
 // zu verwalten.
-function assetsPath(string $assetType) {
+function assetsPath($assetType) {
   $assetsPath = get_template_directory_uri() . '/assets';
 
   switch ($assetType) {
