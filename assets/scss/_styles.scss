@@ -474,7 +474,7 @@ footer {
 		color: $gray-3;
 
       @include screensize-up(m) {
-         padding: 0 30px;
+         padding: 0 20px;
       }
 
 		.left-footer, .right-footer {
@@ -485,7 +485,7 @@ footer {
 
          > ul {
             padding: 0;
-            margin: 0 10px;
+            margin: 0 20px;
 
             li.widget-container {
                padding: 20px 0;
@@ -497,6 +497,13 @@ footer {
 
                a {
                   @extend %footer-a;
+               }
+
+               // select / dropdown gestalten
+               select {
+                  background-color: $gray-2;
+                  height: 30px;
+                  padding: 2px 4px;
                }
             }
          }
