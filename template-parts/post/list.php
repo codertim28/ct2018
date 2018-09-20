@@ -6,7 +6,7 @@
             <img class='thumbnail' src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title(); ?>"/>
          <?php endif; ?>
          <?php
-            the_content('weiterlesen &raquo;','','');
+            the_content('weiterlesen','','');
          ?>
          <div class="blogpost-meta">
                <?php the_category(', '); ?> &lowast; <?php the_time('j. F Y') ?>

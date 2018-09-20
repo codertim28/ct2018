@@ -249,18 +249,18 @@ main {
 
    div.blogpost-meta {
       float: right;
-      color: $gray-2;
+      color: $light-font-color;
 
       @include screensize-down(s) {
          font-size: 14px;
       }
 
       a {
-        color: $gray-2;
+        color: $light-font-color;
         text-decoration: none;
 
         &:hover {
-          color: $gray-3;
+          color: $base-font-color;
         }
       }
    }
@@ -274,10 +274,25 @@ section.blogpost-list {
       border-bottom: 1px solid $gray-2;
 
 		a.more-link {
-         display: inline-block;
+         position: relative;
+         left: 50%;
+         transform: translateX(-50%);
+         display: block;
+         border: 1px solid $gray-3;
+         border-radius: 3px;
+         width: fit-content;
 			margin-top: 8px;
+         margin-bottom: 12px;
+         padding: 9px 10px 7px 10px;
 			color: $gray-3;
+         text-align: center;
 			text-decoration: none;
+         text-transform: uppercase;
+         transition: all 0.3s ease;
+
+         &:hover {
+            background-color: $gray-2;
+         }
 		}
 	}
 }
