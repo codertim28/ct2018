@@ -13,6 +13,7 @@
 		</title>
 
  		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Courgette|Lato" rel="stylesheet">
 		<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" />
 		<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/reaction_buttons.css">
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
