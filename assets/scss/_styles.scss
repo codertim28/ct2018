@@ -408,8 +408,94 @@ article.blogpost {
 }
 
 // Kommentare
+section.comments {
+   // Überscrift
+   #comments {
+      clear: both;
+   }
+
+   ol.commentlist {
+      padding: 0;
+      margin: 0;
+
+      li.comment {
+         list-style-type: none;
+
+         div.comment-body {
+            background-color: $gray-2;
+            border-radius: 4px;
+
+            div.comment-author {
+                  cite, span {
+                     position: relative;
+                     bottom: 10px;
+                     font-style: normal;
+                  }
+
+                  img {
+                     border-top-left-radius: 3px;
+                     border-bottom-right-radius: 3px;
+                     width: 32px;
+                     height: 32px;
+                     margin: 2px;
+                  }
+            }
+
+            div.comment-meta {
+               padding: 8px;
+
+               a {
+                  color: $gray-4;
+                  text-decoration: none;
+               }
+            }
+
+            p {
+               padding: 8px;
+            }
+
+            div.reply {
+               display: inline-block;
+               border-top-right-radius: 3px;
+               border-bottom-left-radius: 3px;
+               background-color: $ct-secondary;
+               padding: 8px 6px;
+               margin: 2px;
+
+               a {
+                  text-decoration: none;
+                  color: $gray-4;
+
+                  &:hover {
+                     text-decoration: underline;
+                  }
+               }
+            }
+         }
+
+         // Eventuelle Kindkommentare
+         // Achtung: nur eine Antwortebene erlaubt!
+         ul.children {
+            margin: 6px 0;
+
+            li.comment.depth-2 {
+               margin: 6px 0;
+            }
+         }
+      }
+   }
+
+   // Autorenkommentar hervorheben
+   li.bypostauthor {
+      div.comment-body {
+      	border: 1px solid $ct-primary;
+      }
+   }
+}
+
 div.comment-respond {
    clear: both;
+   margin-top: 12px;
 
    form {
 
