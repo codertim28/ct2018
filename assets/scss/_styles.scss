@@ -233,6 +233,62 @@ main {
    p {
       text-align: justify;
    }
+
+   ul {
+      li {
+         line-height: 1.5;
+      }
+   }
+
+   hr {
+      border: 0;
+      margin: 0 auto 12px auto;
+      width: 120px;
+      height: 2px;
+
+      background-image: repeating-linear-gradient(45deg,
+                             transparent 0%,
+                             transparent 8%, $gray-3 8%,
+                             $gray-3 16%, transparent 16%);
+   }
+
+   blockquote {
+      border-left: 2px solid $gray-3;
+      margin: 12px;
+      padding: 0 8px;
+
+      > cite {
+         font-style: normal;
+         color: $gray-3;
+      }
+
+      &::before {
+         content: '"';
+         font-family: $handwriting-font;
+         font-size: 34px;
+         color: $gray-3;
+         position: absolute;
+         left: -10px;
+      }
+   }
+
+   // Hervorgehobenes Zitat
+   blockquote.wp-block-pullquote {
+      border-left: none;
+      &::before {
+         content: "";
+      }
+
+      border-top: 2px solid $gray-3;
+      border-bottom: 2px solid $gray-3;
+      padding: 10px;
+      margin: 16px;
+
+      p {
+         text-align: center;
+         font-size: 20px;
+      }
+   }
 }
 
 %blogpost-base {
