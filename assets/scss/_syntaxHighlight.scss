@@ -1,0 +1,15 @@
+// Enthält das Sytling für die Syntaxhervorhebung
+// WP-Plugin: SyntaxHighlighter Evolved
+
+// Ist an dieser Stelle so verschachtelt, um das
+// vorhandene CSS zu überschreiben.
+div.syntaxhighlighter {
+   table tr {
+      td.gutter {
+         div.line {
+            border-right: 3px solid $gray-3 !important;
+            background-color: $gray-2 !important;
+         }
+      }
+   }
+}
